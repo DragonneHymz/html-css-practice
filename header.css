@@ -1,0 +1,133 @@
+.header{
+    height: 70px; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: white;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(202, 196, 196);
+    z-index: 100;
+}
+.header_left{
+    display: flex;
+    align-items: center;
+}
+.header_center{
+    flex: 1;
+    margin-left: 40px;
+    margin-right: 35px;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+}
+.header_right{
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+.hamburger_menu{
+    height: 20px;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+.logo{
+    height: 55px;
+    width: 200px;
+    flex: 1;
+}
+.search_img{
+    height: 28px;
+}
+.search_button{
+    height: 38px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: lightgray;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(194, 198, 202);
+    margin-left: -1px;
+}
+.search_bar{
+    flex: 1;
+    height: 34px;
+    padding-left: 10px;
+    font-size: 16px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: lightgray;
+    border-radius: 3px;
+    box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 0;
+}
+.search_bar::placeholder{
+    font-size: 16px;
+    font-family: Roboto, Arial, sans-serif;
+}
+.apps_menu{
+    height: 40px;
+}
+.notification_bell{
+    height: 28px;
+}
+.current_user_profile_img{
+    width: 40px;
+    border-radius: 20px;
+}
+.notification_bell_container{
+    position: relative;
+}
+.notification_count{
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 10px;
+    padding-left:  6px;
+    padding-right: 6px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 10px;
+
+}
+.notification_bell_container .tool_tip,
+.app_container .tool_tip,
+.search_button .tool_tip{
+    position: absolute;
+    background-color: gray;
+    color: white;
+    padding-top: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    border-radius: 3px;
+    font-family: Roboto, Arial,sans-serif;
+    font-size: 12px;
+    bottom: -30px;
+    opacity: 0;
+    transition: opacity .5s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+.notification_bell_container:hover .tool_tip,
+.app_container:hover .tool_tip,
+.search_button:hover .tool_tip{
+    opacity: 1;
+}
+.app_container,
+.notification_bell_container,
+.search_button{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
